@@ -1,7 +1,5 @@
-Sure! Below is an example README.md file for your Streamlit app project. This document explains the steps to install dependencies, run the application, and use its features.
 
-```markdown
-# Image Processing with Streamlit
+# Image Noise Reducer with Streamlit
 
 ## Overview
 
@@ -76,7 +74,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - OpenCV: https://opencv.org/
 - Streamlit: https://streamlit.io/
 
-```
 
 ### Explanation:
 
@@ -88,4 +85,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 6. **License**: Specify the license under which the project is distributed.
 7. **Acknowledgments**: Acknowledge dependencies or other resources used in the project.
 
-You can save this README.md content into a file named `README.md` in your project's root directory.
