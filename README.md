@@ -61,10 +61,6 @@ pip install streamlit opencv-python matplotlib pillow
 4. **Save Processed Images**:
    - Click the "Save Images" button to save the processed images as `gaussian_blurred_image.jpg` and `median_filtered_image.jpg` in the current directory.
 
-## Contributing
-
-Contributions are welcome! If you have any suggestions or encounter issues, please open an issue on the [GitHub repository](https://github.com/your-username/image-processing-streamlit).
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -74,14 +70,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - OpenCV: https://opencv.org/
 - Streamlit: https://streamlit.io/
 
-
-### Explanation:
-
-1. **Overview**: Provide a brief description of the project.
-2. **Prerequisites**: List the necessary dependencies and explain how to install them.
-3. **Installation**: Guide users through cloning the repository, navigating to the project directory, and installing dependencies.
-4. **Running the Application**: Explain how to start the Streamlit application, upload an image, and process it.
-5. **Contributing**: Inform users about contributing to the project and provide a link to the GitHub repository.
-6. **License**: Specify the license under which the project is distributed.
-7. **Acknowledgments**: Acknowledge dependencies or other resources used in the project.
 
