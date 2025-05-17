@@ -1,4 +1,4 @@
-# 🖼️ Image Processing Toolkt with Streamlit
+# 🖼️ Image Processing Toolkit with Streamlit
 
 A simple image processing web app built using **Streamlit** application designed to demonstrate various image processing techniques, including Gaussian Blur, Median Filtering, PSNR (Peak Signal-to-Noise Ratio), and SSIM (Structural Similarity Index). This app allows users to upload an image and apply these filters, viewing the processed images alongside their original counterpart. It also provides metrics to quantitatively compare the differences between the original and filtered images.
 
