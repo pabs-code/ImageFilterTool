@@ -132,6 +132,6 @@ $$
 
 ## 📄 MIT License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You can view the full license in the `LICENSE` file or use it as a reference for your own projects.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 --- 
