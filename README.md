@@ -1,26 +1,24 @@
-# 🖼️ Image Processing Toolkit with Streamlit
+# ImageEnhancerTool with Streamlit
 
-A simple image processing web app built using **Streamlit** application designed to demonstrate various image processing techniques, including Gaussian Blur, Median Filtering, PSNR (Peak Signal-to-Noise Ratio), and SSIM (Structural Similarity Index). This app allows users to upload an image and apply these filters, viewing the processed images alongside their original counterpart. It also provides metrics to quantitatively compare the differences between the original and filtered images.
+A simple image processing web app built using **Streamlit** application designed to demonstrate various image processing techniques, including Gaussian Blur, Median Filtering, PSNR (Peak Signal-to-Noise Ratio), and SSIM (Structural Similarity Index). This app allows users to upload an image and apply these filters, viewing the processed images alongside their original counterpart. It also provides metrics to quantitatively compare the differences between the original and filtered images.  As well as, view histograms of RGB color channels for each image. 
 
 ---
 
 ## 📚 Table of Contents
 
-- [🖼️ Image Processing with Streamlit](#️-image-processing-with-streamlit)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [🧭 Project Overview](#-project-overview)
-  - [🎯 Features](#-features)
-  - [📦 Installation](#-installation)
-  - [🚀 Usage](#-usage)
-  - [📁 Code Structure](#-code-structure)
-  - [📷 Example Screenshot and Video](#-example-screenshot-and-video)
-  - [🧠 Technical Notes](#-technical-notes)
+  - [Project Overview](#-project-overview)
+  - [Features](#-features)
+  - [Installation](#-installation)
+  - [Usage](#-usage)
+  - [Code Structure](#-code-structure)
+  - [Example Screenshot and Video](#-example-screenshot-and-video)
+  - [Technical Notes](#-technical-notes)
   - [Filtering Techniques and Metrics Definitions](#filtering-techniques-and-metrics-definitions)
-  - [📄 MIT License](#-mit-license)
+  - [MIT License](#-mit-license)
 
 ---
 
-## 🧭 Project Overview
+## Project Overview
 
 This project is a **web-based image processing application** built using **Streamlit**, allowing users to:
 
@@ -34,7 +32,7 @@ It's ideal for educational purposes, image processing experiments, or quick prot
    
 ---
 
-## 🎯 Features
+## Features
 
 | Feature                   | Description                                                    |
 | ------------------------- | -------------------------------------------------------------- |
@@ -47,7 +45,7 @@ It's ideal for educational purposes, image processing experiments, or quick prot
 
 ---
 
-## 📦 Installation
+## Installation
 
 To run this application locally, follow these steps:
 
@@ -62,10 +60,9 @@ To run this application locally, follow these steps:
    ```bash
    streamlit run app.py
    ```
-
 ---
 
-## 🚀 Usage
+## Usage
 
 1. **Upload an image (JPG/JPEG/PNG)**: Use the file uploader to load an image in JPG, JPEG, or PNG format.
 2. **Adjust Parameters for Image Processing**:
@@ -83,7 +80,7 @@ To run this application locally, follow these steps:
 
 ---
 
-## 📁 Code Structure
+## Code Structure
 
 The code is organized into a single Python script (`app.py`) with the following key components:
 
@@ -92,7 +89,7 @@ The code is organized into a single Python script (`app.py`) with the following 
 
 ---
 
-## 📷 Example Screenshot and Video
+## Example Screenshot and Video
 
 > **Screenshot**:  
 ![Example screenshot of the app](https://via.placeholder.com/600x400?text=Image+Processing+App) *(Replace with actual image)*
@@ -102,7 +99,7 @@ The code is organized into a single Python script (`app.py`) with the following 
 
 ---
 
-## 🧠 Technical Notes
+## Technical Notes
 
 - The application uses **OpenCV** for image processing and **Streamlit** for the web interface.
 - Images are loaded as NumPy arrays, processed using OpenCV filters (Gaussian Blur & Median Filter), and displayed in RGB format.
@@ -130,7 +127,7 @@ $$
 
 ---
 
-## 📄 MIT License
+## MIT License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
