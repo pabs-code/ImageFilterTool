@@ -118,9 +118,7 @@ The code is organized into a single Python script (`app.py`) with the following 
    Calculates the ratio between the maximum possible power of a signal and the power of corrupting noise. Higher values indicate less distortion.  
    
    **Formula**:  
-$$
-\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX}_I^2}{\text{MSE}}\right)
-$$  
+$$\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX}_I^2}{\text{MSE}}\right)$$  
 
 - **SSIM (Structural Similarity Index)**  
    Measures the structural similarity between two images based on luminance, contrast, and structure. Values range from -1 to 1, with 1 indicating perfect similarity.  
