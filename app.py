@@ -8,11 +8,14 @@ from skimage.metrics import structural_similarity as ssim
 
 class ImageProcessor:
     """
-    A class to process images using Gaussian Blur and Median Filter.
+    A class to handle the denoise processing of images using Gaussian Blur and Median Filter.
 
     Attributes:
-    image_path (str): The path to the image file.
+        original_image (np.ndarray): The original image in RGB format.
+        gaussian_blur_image (np.ndarray): Image after applying Gaussian blur.
+        median_filter_image (np.ndarray): Image after applying median filter.
     """
+
     def __init__(self):
         self.original_image = None
         self.gaussian_blur_image = None
@@ -130,34 +133,58 @@ class ImageProcessor:
 
 
 def main():
-    st.set_page_config(page_title="Image Processing App", layout="wide")
-    st.title("🖼️ Image Processing with Streamlit")
+    st.set_page_config(
+        page_title="Image Denoise Filter Tool App", layout="wide")
+    st.title("🖼️ Image Denoise Filter Tool with Streamlit")
+    st.markdown(
+        "### Instructions:\n\n"
+        "- Upload an image file: (jpg, jpeg, png)\n"
+        "- Adjust the parameters for Gaussian Blur, Median Filter Kernel Size and Gaussian Sigma.\n"
+        "- View processed images, metrics (PSNR & SSIM), and histograms of RGB color channels for each image.\n"
+        "- You can click ```Save Processed Images``` to save both results as JPEG files.\n"
+    )
 
     uploaded_file = st.file_uploader(
-        "Upload an image", type=["jpg", "jpeg", "png"])
+        "Upload an image (JPG, JPEG, or PNG)",
+        type=["jpg", "jpeg", "png"],
+        key="image_uploader"
+    )
 
     if uploaded_file is not None:
         try:
             image = Image.open(uploaded_file)
-            st.image(image, caption="Original Image", use_container_width=True)
+            st.image(image, caption="Uploaded Image", use_container_width=True)
 
             processor = ImageProcessor()
             original_image = processor.load_image(image)
 
-            st.markdown("### 🔧 Parameters for Image Processing")
+            st.markdown("### 🔧 Adjust Image Filter Parameters")
             col1, col2 = st.columns(2)
-
             with col1:
                 gauss_ksize = st.slider(
-                    "Gaussian Kernel Size", min_value=3, max_value=15, value=5, step=2)
+                    "Gaussian Blur Kernel Size",
+                    min_value=3,
+                    max_value=15,
+                    value=5,
+                    step=2
+                )
                 gauss_sigma = st.slider(
-                    "Gaussian Sigma", min_value=0.0, max_value=10.0, value=0.0)
+                    "Gaussian Sigma",
+                    min_value=0.0,
+                    max_value=10.0,
+                    value=0.0,
+                    step=0.5
+                )
             with col2:
                 median_ksize = st.slider(
-                    "Median Kernel Size", min_value=3, max_value=21, value=5, step=2)
+                    "Median Filter Kernel Size",
+                    min_value=3,
+                    max_value=21,
+                    value=5,
+                    step=2
+                )
 
             st.markdown("### 📈 Processed Results")
-
             gaussian_image = processor.apply_gaussian_blur(
                 (gauss_ksize, gauss_ksize), gauss_sigma)
             median_image = processor.apply_median_filter(median_ksize)
@@ -173,7 +200,6 @@ def main():
                 st.image(median_image, caption="Median Filter",
                          use_container_width=True)
 
-            # Compute and display metrics
             st.markdown("### 📊 Metrics")
             psnr_gauss = processor.compute_psnr(original_image, gaussian_image)
             psnr_median = processor.compute_psnr(original_image, median_image)
