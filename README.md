@@ -4,17 +4,17 @@ A simple image processing web app built using **Streamlit** application designed
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-  - [Project Overview](#-project-overview)
-  - [Features](#-features)
-  - [Installation](#-installation)
-  - [Usage](#-usage)
-  - [Code Structure](#-code-structure)
-  - [Example Screenshot and Video](#-example-screenshot-and-video)
-  - [Technical Notes](#-technical-notes)
+  - [Project Overview](#project-overview)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Code Structure](#code-structure)
+  - [Example Screenshot and Video](#example-screenshot-and-video)
+  - [Technical Notes](#technical-notes)
   - [Filtering Techniques and Metrics Definitions](#filtering-techniques-and-metrics-definitions)
-  - [MIT License](#-mit-license)
+  - [MIT License](#mit-license)
 
 ---
 
