@@ -92,9 +92,7 @@ The code is organized into a single Python script (`app.py`) with the following 
 ## Example Screenshot and Video
 
 
-
-> **Video Demo**:
-[Watch a demo video here](<video src="https://github.com/pabs-code/ImageDenoiseFilter-Tool/blob/main/assets/denoise-filter-app.mp4" controls></video>)
+<video width="630" height="300" src="https://github.com/user-attachments/assets/f81f76ad-ca7b-4352-8cd7-b1649d09b020"></video>
 
 ---
 
