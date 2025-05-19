@@ -6,6 +6,8 @@ A simple image processing web app built using **Streamlit** application designed
 
 ## Table of Contents
 
+- [Image Denoise Filter Tool with Streamlit](#image-denoise-filter-tool-with-streamlit)
+  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Features](#features)
   - [Installation](#installation)
