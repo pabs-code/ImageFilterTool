@@ -121,7 +121,6 @@ The code is organized into a single Python script (`app.py`) with the following 
 **How it works:**  
   PSNR is calculated using the **Mean Squared Error (MSE)** between the original and processed images.  
 - **The formula**:  
-  
   $\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$
     
   where `MAX_I` is the maximum pixel value (e.g., 255 for 8-bit images).  
