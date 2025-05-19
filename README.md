@@ -6,16 +6,12 @@ A simple image processing web app built using **Streamlit** application designed
 
 ## Table of Contents
 
-- [Image Denoise Filter Tool with Streamlit](#image-denoise-filter-tool-with-streamlit)
-  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Example Screenshot and Video](#example-screenshot-and-video)
   - [Filtering Techniques and Metrics Definitions](#filtering-techniques-and-metrics-definitions)
-  - [How it works](#how-it-works)
-  - [Key Differences](#key-differences)
   - [Example Use Case](#example-use-case)
   - [Summary](#summary)
   - [MIT License](#mit-license)
@@ -99,14 +95,7 @@ To run this application locally, follow these steps:
 - **Median Filter**  
    A non-linear filter that replaces each pixel with the median of its neighbors, effective against salt-and-pepper noise while preserving edges better than Gaussian filters.  
 
-- **Peak Signal-to-Noise Ratio (PSNR)**  
-**What it measures:**  
-  PSNR quantifies the **quality of a distorted image** compared to its original counterpart. It evaluates how much noise or distortion has been introduced during processing, such as compression, filtering, or resizing.
-
----
-
-## How it works
-
+**Peak Signal-to-Noise Ratio**
 - **PSNR** is calculated using the **Mean Squared Error (MSE)** between the original and processed images.
   
 - **The formula**:
@@ -124,7 +113,7 @@ To run this application locally, follow these steps:
   
 - **Use Case**: Often used for objective evaluation of image compression algorithms or noise reduction techniques.  
 
-- **Structural Similarity Index (SSIM)**
+**Structural Similarity Index (SSIM)**
   
 - **SSIM** evaluates how similar two images are in terms of their **structure, luminance (brightness), and contrast**, mimicking human visual perception. It is more aligned with subjective image quality assessment than PSNR.
 
@@ -141,15 +130,16 @@ To run this application locally, follow these steps:
 - **Higher SSIM = Better Structural Similarity**: Indicates that the processed image retains key structural details of the original (e.g., edges, textures).  
 - **Lower SSIM = Structural Differences**: Suggests significant changes in visual structure (e.g., blurring, edge loss, or artifacts).  
 - **Use Case**: Ideal for assessing perceptual quality in applications like image restoration, compression, and filtering.  
---- 
 
-## Key Differences
+**Key Differences between PSNR and SSIM**
+
 | **Metric** | **Focus**               | **What It Tells You**                          |
 | ---------- | ----------------------- | ---------------------------------------------- |
 | **PSNR**   | Pixel-level differences | Noise or distortion in the image (objective).  |
 | **SSIM**   | Structural similarity   | How similar the images look to a human viewer. |
 
 ---
+
 ## Example Use Case 
 - If you apply **Gaussian Blur** to an image:  
   - **PSNR** will drop significantly (high noise/blur).  
@@ -163,6 +153,7 @@ To run this application locally, follow these steps:
 - Use **PSNR** for quick, objective assessments of pixel-level quality.  
 - Use **SSIM** to evaluate how well the image retains its visual structure and perceptual fidelity.  
 - Together, these metrics provide a **comprehensive view** of image degradation or enhancement during processing.
+
 ---
 
 ## MIT License
