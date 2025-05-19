@@ -114,15 +114,62 @@ The code is organized into a single Python script (`app.py`) with the following 
 - **Median Filter**  
    A non-linear filter that replaces each pixel with the median of its neighbors, effective against salt-and-pepper noise while preserving edges better than Gaussian filters.  
 
-- **PSNR (Peak Signal-to-Noise Ratio)**  
-   Calculates the ratio between the maximum possible power of a signal and the power of corrupting noise. Higher values indicate less distortion.  
-   
-   **Formula**:  
-$$\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX}_I^2}{\text{MSE}}\right)$$  
+- **Peak Signal-to-Noise Ratio (PSNR)**  
+**What it measures:**  
+  PSNR quantifies the **quality of a distorted image** compared to its original counterpart. It evaluates how much noise or distortion has been introduced during processing, such as compression, filtering, or resizing.
 
-- **SSIM (Structural Similarity Index)**  
-   Measures the structural similarity between two images based on luminance, contrast, and structure. Values range from -1 to 1, with 1 indicating perfect similarity.  
+**How it works:**  
+  PSNR is calculated using the **Mean Squared Error (MSE)** between the original and processed images.  
+- **The formula**:  
+  
+  $$\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$$
+    
+  where `MAX_I` is the maximum pixel value (e.g., 255 for 8-bit images).  
 
+**What it tells you:**  
+- **Higher PSNR = Better Quality**: Indicates minimal noise or distortion.  
+- **Lower PSNR = More Distortion**: Suggests significant degradation in image quality (e.g., due to compression, blurring, or filtering).
+  
+- **Use Case**: Often used for objective evaluation of image compression algorithms or noise reduction techniques.  
+
+---
+
+- **Structural Similarity Index (SSIM)**  
+**What it measures:**  
+  SSIM evaluates how similar two images are in terms of their **structure, luminance (brightness), and contrast**, mimicking human visual perception. It is more aligned with subjective image quality assessment than PSNR.
+
+**How it works:**  
+- SSIM compares the **local structure** of patches in both images using a windowed approach.  
+- **The formula**:  
+  $$\text{SSIM}(x, y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2 + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$$  
+
+  where `μ` is the mean, `σ` is the standard deviation, and `C₁`, `C₂` are constants to stabilize values.  
+
+**What it tells you:**  
+- **Higher SSIM = Better Structural Similarity**: Indicates that the processed image retains key structural details of the original (e.g., edges, textures).  
+- **Lower SSIM = Structural Differences**: Suggests significant changes in visual structure (e.g., blurring, edge loss, or artifacts).  
+- **Use Case**: Ideal for assessing perceptual quality in applications like image restoration, compression, and filtering.  
+
+---
+
+### **Key Differences:**
+| **Metric**   | **Focus**              | **What It Tells You**                          |
+|--------------|------------------------|------------------------------------------------|
+| **PSNR**     | Pixel-level differences | Noise or distortion in the image (objective).  |
+| **SSIM**     | Structural similarity  | How similar the images look to a human viewer. |
+
+### **Example Use Case:**  
+- If you apply **Gaussian Blur** to an image:  
+  - **PSNR** will drop significantly (high noise/blur).  
+  - **SSIM** may decrease more gradually, reflecting how much structure is preserved.  
+- If you apply **Median Filtering** (to reduce noise):  
+  - **PSNR** improves if noise is reduced.  
+  - **SSIM** might remain stable or slightly improve, as median filtering preserves edges better than Gaussian blur.
+
+### **Summary:**  
+- Use **PSNR** for quick, objective assessments of pixel-level quality.  
+- Use **SSIM** to evaluate how well the image retains its visual structure and perceptual fidelity.  
+- Together, these metrics provide a **comprehensive view** of image degradation or enhancement during processing.
 ---
 
 ## MIT License
