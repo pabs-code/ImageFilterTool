@@ -122,7 +122,7 @@ The code is organized into a single Python script (`app.py`) with the following 
   PSNR is calculated using the **Mean Squared Error (MSE)** between the original and processed images.  
 - **The formula**:  
   
-  $$\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$$
+  $\text{PSNR} = 10 \cdot \log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$
     
   where `MAX_I` is the maximum pixel value (e.g., 255 for 8-bit images).  
 
@@ -141,7 +141,7 @@ The code is organized into a single Python script (`app.py`) with the following 
 **How it works:**  
 - SSIM compares the **local structure** of patches in both images using a windowed approach.  
 - **The formula**:  
-  $$\text{SSIM}(x, y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2 + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$$  
+  $\text{SSIM}(x, y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2 + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$ 
 
   where `μ` is the mean, `σ` is the standard deviation, and `C₁`, `C₂` are constants to stabilize values.  
 
