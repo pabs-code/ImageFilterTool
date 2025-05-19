@@ -91,13 +91,10 @@ The code is organized into a single Python script (`app.py`) with the following 
 
 ## Example Screenshot and Video
 
-> **Screenshot**:  
-![Example screenshot of the app](https://via.placeholder.com/600x400?text=Image+Processing+App) *(Replace with actual image)*
+
 
 > **Video Demo**:
-[Watch a demo video here]
-
-<video src="https://github.com/pabs-code/ImageDenoiseFilter-Tool/blob/main/assets/denoise-filter-app.mp4" controls></video>)
+[Watch a demo video here](<video src="https://github.com/pabs-code/ImageDenoiseFilter-Tool/blob/main/assets/denoise-filter-app.mp4" controls></video>)
 
 ---
 
@@ -123,7 +120,7 @@ The code is organized into a single Python script (`app.py`) with the following 
 **How it works:**  
   PSNR is calculated using the **Mean Squared Error (MSE)** between the original and processed images.  
 - **The formula**:  
-  $\text{PSNR} = 10\cdot \log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$
+  $\text{PSNR} = 10\cdot\log_{10}\left(\frac{\text{MAX\_I}^2}{\text{MSE}}\right)$
     
   where `MAX_I` is the maximum pixel value (e.g., 255 for 8-bit images).  
 
