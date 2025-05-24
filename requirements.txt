@@ -1,3 +1,8 @@
+# installation
+# pip install -r /path/to/requirements.txt 
+
+# Required dependencies for image-denoise-filter-tool
+
 opencv-python==4.11.0.86
 Pillow==11.1.0
 matplotlib==3.10.1
